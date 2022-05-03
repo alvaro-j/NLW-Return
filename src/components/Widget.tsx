@@ -1,7 +1,13 @@
 import React from "react";
 
+import { ChatTeardropDots } from "phosphor-react";
+
 const Widget = () => {
-	return <div>Widget</div>;
+	return (
+		<button>
+			<ChatTeardropDots />
+		</button>
+	);
 };
 
 export default Widget;
