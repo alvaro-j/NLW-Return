@@ -3,11 +3,14 @@ import React from "react";
 import { ChatTeardropDots } from "phosphor-react";
 
 import { Popover } from "@headlessui/react";
+import WidgetForm from "./WidgetForm";
 
 const Widget = () => {
 	return (
 		<Popover className="absolute bottom-5 right-5">
-			<Popover.Panel>oi</Popover.Panel>
+			<Popover.Panel>
+				<WidgetForm />
+			</Popover.Panel>
 			<Popover.Button className="bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group">
 				{/*groud class is to connect things and apply the same effects to the elements inside it, like hover*/}
 				<ChatTeardropDots className="w-6 h-6" />
