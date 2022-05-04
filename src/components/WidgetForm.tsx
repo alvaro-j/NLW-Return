@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const WidgetForm = () => {
-  return (
-    <div>WidgetForm</div>
-  )
-}
+	return <div className="bg-zinc-900 p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg">WidgetForm</div>;
+};
 
-export default WidgetForm
+export default WidgetForm;
