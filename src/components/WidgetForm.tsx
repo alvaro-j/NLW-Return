@@ -5,6 +5,8 @@ import bugImgUrl from "../assets/bug.svg";
 import ideaImgUrl from "../assets/idea.svg";
 import thoughtImgUrl from "../assets/thought.svg";
 
+// stores img url and it's alt text 👇
+
 const feedbackTypes = {
 	BUG: {
 		title: "Problem",
