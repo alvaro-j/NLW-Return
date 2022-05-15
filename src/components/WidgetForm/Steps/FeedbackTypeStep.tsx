@@ -1,9 +1,27 @@
-import React from 'react'
+import React from "react";
+import { FeedbackType, feedbackTypes } from "..";
 
-const FeedbackTypeStep = () => {
-  return (
-    <div>FeedbackTypeStep</div>
-  )
+interface FeedbackTypeStepProps {
+	onFeedbackTypeChange: (type: FeedbackType) => void;
 }
 
-export default FeedbackTypeStep
+const FeedbackTypeStep = ({onFeedbackTypeChange}: FeedbackTypeStepProps) => {
+	return (
+		<div className="flex py-8 gap-2 w-full">
+			{/* Object.entries return a array from a object */}
+			{Object.entries(feedbackTypes).map(([key, value]) => (
+				<button
+					key={key}
+					className="bg-zinc-800 rounded-lg py-5 w-24 flex flex-1 flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none transition-all"
+					type="button"
+					onClick={() => onFeedbackTypeChange(key as FeedbackType)}
+				>
+					<img src={value.image.source} alt={value.image.alt} />
+					<span>{value.title}</span>
+				</button>
+			))}
+		</div>
+	);
+};
+
+export default FeedbackTypeStep;
