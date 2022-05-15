@@ -48,7 +48,7 @@ const WidgetForm = () => {
 				))}
 			</div>
 			<footer className="text-xs text-neutral-500">
-				Feito com ♥️ pela{" "}
+				Made with ♥️ by{" "}
 				<a
 					className="underline underline-offset-2"
 					target="_blank"
