@@ -39,6 +39,7 @@ const WidgetForm = () => {
 				<CloseButton />
 			</header>
 			<div className="flex py-8 w-full">
+				{/* Object.entries return a array from a object */}
 				{Object.entries(feedbackTypes).map(([key, value]) => (
 					<button key={key}>
 						<img src={value.image.source} alt={value.image.alt} />
