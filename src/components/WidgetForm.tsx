@@ -38,7 +38,14 @@ const WidgetForm = () => {
 				<span className="text-xl leading-6">Leave your feedback</span>
 				<CloseButton />
 			</header>
-			<div className="flex py-8 w-full">a</div>
+			<div className="flex py-8 w-full">
+				{Object.entries(feedbackTypes).map(([key, value]) => (
+					<button key={key}>
+						<img src={value.image.source} alt={value.image.alt} />
+						<span>{value.title}</span>
+					</button>
+				))}
+			</div>
 			<footer className="text-xs text-neutral-500">
 				Feito com ♥️ pela{" "}
 				<a
