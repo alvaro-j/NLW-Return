@@ -4,10 +4,11 @@ import CloseButton from "../CloseButton";
 import bugImgUrl from "../../assets/bug.svg";
 import ideaImgUrl from "../../assets/idea.svg";
 import thoughtImgUrl from "../../assets/thought.svg";
+import FeedbackTypeStep from "./Steps/FeedbackTypeStep";
 
 // stores img url and it's alt text 👇
 
-const feedbackTypes = {
+export const feedbackTypes = {
 	BUG: {
 		title: "Problem",
 		image: {
@@ -31,7 +32,7 @@ const feedbackTypes = {
 	},
 };
 
-type FeedbackType = keyof typeof feedbackTypes; // keyof returns the keys of the feedbackTypes object
+export type FeedbackType = keyof typeof feedbackTypes; // keyof returns the keys of the feedbackTypes object
 
 const WidgetForm = () => {
 	const [feedbackType, setFeedbackType] = React.useState<FeedbackType | null>(null);
@@ -42,20 +43,7 @@ const WidgetForm = () => {
 				<CloseButton />
 			</header>
 			{!feedbackType ? (
-				<div className="flex py-8 gap-2 w-full">
-					{/* Object.entries return a array from a object */}
-					{Object.entries(feedbackTypes).map(([key, value]) => (
-						<button
-							key={key}
-							className="bg-zinc-800 rounded-lg py-5 w-24 flex flex-1 flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none transition-all"
-							type="button"
-							onClick={() => setFeedbackType(key as FeedbackType)}
-						>
-							<img src={value.image.source} alt={value.image.alt} />
-							<span>{value.title}</span>
-						</button>
-					))}
-				</div>
+				<FeedbackTypeStep onFeedbackTypeChange={setFeedbackType} />
 			) : (
 				<p>hi mf</p>
 			)}
