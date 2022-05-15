@@ -43,7 +43,7 @@ const WidgetForm = () => {
 			{!feedbackType ? (
 				<FeedbackTypeStep onFeedbackTypeChange={setFeedbackType} />
 			) : (
-				<FeedbackContentStep />
+				<FeedbackContentStep feedbackType={feedbackType} />
 			)}
 			<footer className="text-xs text-neutral-500">
 				Made with ♥️ by{" "}
