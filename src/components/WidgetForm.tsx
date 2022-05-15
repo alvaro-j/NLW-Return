@@ -31,6 +31,8 @@ const feedbackTypes = {
 	},
 };
 
+type FeedbackType = keyof typeof feedbackTypes; // keyof returns the keys of the feedbackTypes object
+
 const WidgetForm = () => {
 	const [feedbackType, setFeedbackType] = React.useState(null);
 	return (
@@ -46,6 +48,7 @@ const WidgetForm = () => {
 						key={key}
 						className="bg-zinc-800 rounded-lg py-5 w-24 flex flex-1 flex-col items-center gap-2 border-2 border-transparent hover:border-brand-500 focus:border-brand-500 focus:outline-none transition-all"
 						type="button"
+						onClick={() => setFeedbackType(key)}
 					>
 						<img src={value.image.source} alt={value.image.alt} />
 						<span>{value.title}</span>
