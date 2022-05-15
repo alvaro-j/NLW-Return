@@ -41,7 +41,7 @@ const WidgetForm = () => {
 			<div className="flex py-8 w-full">
 				{/* Object.entries return a array from a object */}
 				{Object.entries(feedbackTypes).map(([key, value]) => (
-					<button key={key}>
+					<button key={key} className="bg-zinc-800 rounded-lg py-5 w-24 flex-1 flex-col" type="button">
 						<img src={value.image.source} alt={value.image.alt} />
 						<span>{value.title}</span>
 					</button>
