@@ -5,6 +5,7 @@ import bugImgUrl from "../../assets/bug.svg";
 import ideaImgUrl from "../../assets/idea.svg";
 import thoughtImgUrl from "../../assets/thought.svg";
 import FeedbackTypeStep from "./Steps/FeedbackTypeStep";
+import FeedbackContentStep from "./Steps/FeedbackContentStep";
 
 // stores img url and it's alt text 👇
 
@@ -45,7 +46,7 @@ const WidgetForm = () => {
 			{!feedbackType ? (
 				<FeedbackTypeStep onFeedbackTypeChange={setFeedbackType} />
 			) : (
-				<p>hi mf</p>
+				<FeedbackContentStep />
 			)}
 			<footer className="text-xs text-neutral-500">
 				Made with ♥️ by{" "}
