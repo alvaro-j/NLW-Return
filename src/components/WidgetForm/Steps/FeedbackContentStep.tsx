@@ -42,9 +42,9 @@ const FeedbackContentStep = ({
 			<footer>
 				<button
 					type="submit"
-					className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900"
+					className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
 				>
-					Submit
+					Send feedback
 				</button>
 			</footer>
 		</>
