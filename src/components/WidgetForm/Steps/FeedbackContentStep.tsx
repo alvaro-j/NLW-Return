@@ -11,7 +11,10 @@ const FeedbackContentStep = ({ feedbackType }: FeedbackContentStepProps) => {
 	return (
 		<>
 			<header>
-				<span className="text-xl leading-6">{feedbackTypeInfo.title}</span>
+				<span className="text-xl leading-6">
+					<img src={feedbackTypeInfo.image.source} alt={feedbackTypeInfo.image.alt} />
+					{feedbackTypeInfo.title}
+				</span>
 				<CloseButton />
 			</header>
 			<div className="flex py-8 gap-2 w-full"></div>
