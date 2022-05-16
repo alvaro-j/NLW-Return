@@ -1,5 +1,5 @@
 import React from "react";
-import { FeedbackType } from "..";
+import { FeedbackType, feedbackTypes } from "..";
 import CloseButton from "../../CloseButton";
 
 interface FeedbackContentStepProps {
