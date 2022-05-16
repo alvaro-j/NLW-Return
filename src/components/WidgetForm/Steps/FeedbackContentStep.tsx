@@ -12,7 +12,7 @@ const FeedbackContentStep = ({ feedbackType }: FeedbackContentStepProps) => {
 	return (
 		<>
 			<header>
-				<button type="button">
+				<button type="button" className="top-5 left-5 absolute">
 					<ArrowLeft weight="bold" className="w-4 h-4" />
 				</button>
 				<span className="text-xl leading-6 flex gap-2">
