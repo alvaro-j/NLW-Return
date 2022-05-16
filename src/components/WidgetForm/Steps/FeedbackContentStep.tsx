@@ -17,6 +17,7 @@ const FeedbackContentStep = ({
 		<>
 			<header>
 				<button
+					onClick={() => onFeedbackRestartRequest()}
 					type="button"
 					className="top-5 left-5 absolute text-zinc-400 hover:text-zinc-100 transition-all"
 				>
