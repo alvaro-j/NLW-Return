@@ -12,7 +12,7 @@ const FeedbackContentStep = ({
 	feedbackType,
 	onFeedbackRestartRequest,
 }: FeedbackContentStepProps) => {
-	const feedbackTypeInfo = feedbackTypes[feedbackType];
+	const feedbackTypeInfo = feedbackTypes[feedbackType]; // sets the correct feedback type based on the object feedbackTypes
 	return (
 		<>
 			<header>
@@ -40,7 +40,10 @@ const FeedbackContentStep = ({
 				/>
 			</form>
 			<footer className="flex gap-2 mt-2">
-				<button type="button" className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500">
+				<button
+					type="button"
+					className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
+				>
 					<Camera className="w-6 h-6" />
 				</button>
 				<button
