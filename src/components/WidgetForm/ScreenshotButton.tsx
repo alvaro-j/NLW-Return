@@ -3,13 +3,18 @@ import { Camera } from "phosphor-react";
 import React from "react";
 import Loading from "../Loading";
 
-const ScreenshotButton = () => {
+interface ScreenshotButtonProps {
+	onScreenshotTook: (screenshot: string) => void
+}
+
+const ScreenshotButton = ({onScreenshotTook}: ScreenshotButtonProps) => {
 	const [isTakingScreenshot, setIsTakingScreenshot] = React.useState(false);
 
 	const handleTakeScreenshot = async () => {
 		setIsTakingScreenshot(true);
 		const canvas = await html2canvas(document.querySelector("html")!); // the exclamation mark forces typescript to accept the querySelector()
 		const base64image = canvas.toDataURL("image/png"); // converts the print into a png with format base64
+		onScreenshotTook(base64image)
 		setIsTakingScreenshot(false);
 	};
 	return (
