@@ -1,16 +1,16 @@
 import html2canvas from "html2canvas";
 import { Camera } from "phosphor-react";
 import React from "react";
+import Loading from "../Loading";
 
 const ScreenshotButton = () => {
 	const [isTakingScreenshot, setIsTakingScreenshot] = React.useState(false);
 
 	const handleTakeScreenshot = async () => {
-    setIsTakingScreenshot(true)
-    const canvas = await html2canvas(document.querySelector("html")!); // the exclamation mark forces typescript to accept the querySelector()
+		setIsTakingScreenshot(true);
+		const canvas = await html2canvas(document.querySelector("html")!); // the exclamation mark forces typescript to accept the querySelector()
 		const base64image = canvas.toDataURL("image/png"); // converts the print into a png with format base64
-		console.log(base64image);
-    setIsTakingScreenshot(false)
+		setIsTakingScreenshot(false);
 	};
 	return (
 		<button
@@ -18,7 +18,7 @@ const ScreenshotButton = () => {
 			onClick={handleTakeScreenshot}
 			className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
 		>
-			<Camera className="w-6 h-6" />
+			{isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6" />}
 		</button>
 	);
 };
