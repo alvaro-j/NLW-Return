@@ -3,8 +3,8 @@ import React from "react";
 
 const Loading = () => {
 	return (
-		<div>
-			<CircleNotch width="bold" className="w-4 h-4" />
+		<div className="w-6 h-6 flex items-center justify-center overflow-hidden">
+			<CircleNotch width="bold" className="w-4 h-4 animate-spin" />
 		</div>
 	);
 };
