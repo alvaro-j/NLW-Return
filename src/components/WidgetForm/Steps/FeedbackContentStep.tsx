@@ -14,6 +14,8 @@ const FeedbackContentStep = ({
 	onFeedbackRestartRequest,
 }: FeedbackContentStepProps) => {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
+	const [comment, setComment] = React.useState("");
+
 	const feedbackTypeInfo = feedbackTypes[feedbackType]; // sets the correct feedback type based on the object feedbackTypes
 	return (
 		<>
@@ -39,6 +41,7 @@ const FeedbackContentStep = ({
 				<textarea
 					placeholder="Tell what's happening..."
 					className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 border-zinc-600 bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none focus:outline-none scrollbar scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin"
+					onChange={({ target }) => setComment(target.value)}
 				/>
 				<footer className="flex gap-2 mt-2">
 					<ScreenshotButton screenshot={screenshot} onScreenshotTook={setScreenshot} />
