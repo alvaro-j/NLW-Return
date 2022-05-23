@@ -19,7 +19,7 @@ const FeedbackContentStep = ({
 	const handleSubmitFeedback = (e: FormEvent) => {
 		// FormEvent is the interface from Reac5
 		e.preventDefault();
-		console.log(screenshot, comment);
+		console.log({ screenshot, comment });
 	};
 
 	const feedbackTypeInfo = feedbackTypes[feedbackType]; // sets the correct feedback type based on the object feedbackTypes
