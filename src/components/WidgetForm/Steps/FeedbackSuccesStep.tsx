@@ -1,7 +1,11 @@
 import React from "react";
 import CloseButton from "../../CloseButton";
 
-const FeedbackSuccesStep = () => {
+interface FeedbackSuccesStepProps {
+	onFeedbackRestartRequest: () => void;
+}
+
+const FeedbackSuccesStep = ({ onFeedbackRestartRequest }: FeedbackSuccesStepProps) => {
 	return (
 		<>
 			<header>
