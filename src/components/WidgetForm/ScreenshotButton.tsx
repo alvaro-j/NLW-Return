@@ -28,6 +28,7 @@ const ScreenshotButton = ({ onScreenshotTook, screenshot }: ScreenshotButtonProp
 					backgroundPosition: "right bottom",
 					backgroundSize: 100,
 				}}
+				onClick={() => onScreenshotTook(null)}
 			>
 				<Trash weight="fill" />
 			</button>
