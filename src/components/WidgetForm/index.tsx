@@ -41,7 +41,8 @@ const WidgetForm = () => {
 	const [feedbackSent, setFeedbackSent] = React.useState(false);
 
 	const handleRestartFeedback = () => {
-		setFeedbackType(null);
+		setFeedbackSent(false) // deletes the feedback that was sent
+		setFeedbackType(null); // deletes the current type of feedback
 	};
 
 	return (
