@@ -4,6 +4,7 @@ import React from "react";
 import Loading from "../Loading";
 
 interface ScreenshotButtonProps {
+	// the screenshot can be either null if it wasn't taken or string if it was already taken
 	onScreenshotTook: (screenshot: string | null) => void;
 	screenshot: string | null;
 }
