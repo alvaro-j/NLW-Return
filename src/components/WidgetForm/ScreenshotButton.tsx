@@ -4,8 +4,8 @@ import React from "react";
 import Loading from "../Loading";
 
 interface ScreenshotButtonProps {
-	onScreenshotTook: (screenshot: string) => void;
-	screenshot: string;
+	onScreenshotTook: (screenshot: string | null) => void;
+	screenshot: string | null;
 }
 
 const ScreenshotButton = ({ onScreenshotTook, screenshot }: ScreenshotButtonProps) => {
