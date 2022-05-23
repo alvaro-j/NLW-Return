@@ -7,11 +7,13 @@ import ScreenshotButton from "../ScreenshotButton";
 interface FeedbackContentStepProps {
 	feedbackType: FeedbackType;
 	onFeedbackRestartRequest: () => void;
+	onFeedbackSent: () => void;
 }
 
 const FeedbackContentStep = ({
 	feedbackType,
 	onFeedbackRestartRequest,
+	onFeedbackSent,
 }: FeedbackContentStepProps) => {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
 	const [comment, setComment] = React.useState("");
@@ -20,6 +22,7 @@ const FeedbackContentStep = ({
 		// FormEvent is the interface from Reac5
 		e.preventDefault();
 		console.log({ screenshot, comment });
+		onFeedbackSent();
 	};
 
 	const feedbackTypeInfo = feedbackTypes[feedbackType]; // sets the correct feedback type based on the object feedbackTypes
