@@ -2,6 +2,10 @@ import express from "express";
 
 const app = express();
 
-app.listen(3334, () => {
+app.get("/users", (req, res) => {
+	return res.send("<h1>hello world</h1>");
+});
+
+app.listen(3333, () => {
 	console.log("HTTP server running!");
 });
