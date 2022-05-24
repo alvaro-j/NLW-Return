@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Feedback {
+model Feedback { // creates table in the database
   id String @id @default(uuid())
 
   type       String
