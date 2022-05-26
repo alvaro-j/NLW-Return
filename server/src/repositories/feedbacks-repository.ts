@@ -7,5 +7,5 @@ interface FeedbacksCreateData {
 
 export interface FeedbacksRepository {
 	// defines the methods for the feedbacks
-	create: () => void; // creates a new feedback
+	create: (data: FeedbacksCreateData) => void; // creates a new feedback
 }
