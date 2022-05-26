@@ -1,4 +1,4 @@
-interface FeedbacksCreateData {
+export interface FeedbacksCreateData {
 	// what kind of data it needs to create the feedback
 	type: string;
 	comment: string;
