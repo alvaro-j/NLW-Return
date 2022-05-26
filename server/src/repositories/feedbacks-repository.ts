@@ -7,5 +7,6 @@ export interface FeedbacksCreateData {
 
 export interface FeedbacksRepository {
 	// defines the methods for the feedbacks
-	create: (data: FeedbacksCreateData) => void; // creates a new feedback
+	create: (data: FeedbacksCreateData) => Promise<void>; // creates a new feedback
+	// returns a Promise cause the create method is an async function
 }
