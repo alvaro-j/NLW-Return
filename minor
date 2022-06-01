@@ -1,0 +1,286 @@
+[33mcommit 7b6e915b6a74b637e2eca0f8d8d550d4ebfaf030[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:30:46 2022 -0300
+
+    minor fix
+
+[33mcommit f2a364694125b891b05bd2c9350fe025e2056ae5[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:30:29 2022 -0300
+
+    create new feedback
+
+[33mcommit 8481dbdcb97251fe94db8673f534c85aee133d86[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:26:54 2022 -0300
+
+    import MailAdapter and add await fucnt
+
+[33mcommit 32b27ec3ba9abd2e538eda40d557e1f51b654c3e[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:26:30 2022 -0300
+
+    import NodemailerMailAdapter and create const
+
+[33mcommit e6d29b95f03bc9cf66c4f23b89491dcf84c314f0[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:22:30 2022 -0300
+
+    create nodemailer adapter
+
+[33mcommit b31d3a67f0f1714dc23cecae293d377ba2012ce0[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:20:45 2022 -0300
+
+    remove nodemailer code from routes
+
+[33mcommit 7c263ba07de5ab41cd0dc67ff6a390c92e286ff5[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:18:16 2022 -0300
+
+    change to promise
+
+[33mcommit 14e9101480c578047466b2ca30fe1bde922a29ba[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sun May 29 10:15:21 2022 -0300
+
+    create adapters folder and interfaces
+
+[33mcommit af7e774af82854a474fdbef31d1f8aa83611e2a5[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Sat May 28 20:00:00 2022 +0100
+
+    28 May commit
+
+[33mcommit 05e9d4f740f20b87a075b7be9be68782e3ea5d66[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Fri May 27 11:16:56 2022 -0300
+
+    new feedback test
+
+[33mcommit d33952cf0b0339ca6424f17f28547f6cbea9bdb0[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Fri May 27 11:03:59 2022 -0300
+
+    execute submitFeedbackUseCase function
+
+[33mcommit 3d2bfe5c4ce37db2bd79dd5e1d8475070408320c[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Fri May 27 10:48:08 2022 -0300
+
+    add create function
+
+[33mcommit ea309f69f7ac929cccef12b026bf1cda046f65a9[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Fri May 27 10:45:38 2022 -0300
+
+    create constructor and import FeedbacksRepository
+
+[33mcommit 3e8039685d3f1cbe0260eaeb31045ee30a04ac76[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Fri May 27 10:31:12 2022 -0300
+
+    create use-cases folder and submit method
+
+[33mcommit 8da6389bc0342f74eed15b76a1f5c692102dd07f[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:27:48 2022 -0300
+
+    add create async fnct
+
+[33mcommit 8d455fc5e442631334bb1a81e4b197a146a99ece[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:27:25 2022 -0300
+
+    change return to Promise
+
+[33mcommit a4aa82560bfa22039da4b2e81cc5b94d3a56c453[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:18:20 2022 -0300
+
+    create database operations file
+
+[33mcommit d2fea7ffe211860b72f59be107328bdeda49ae57[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:18:03 2022 -0300
+
+    add export
+
+[33mcommit 4b3dd9bdae069db4f1ece374b2263d1740b990f4[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:09:25 2022 -0300
+
+    pass data to method
+
+[33mcommit 9363b79d3ac586a19b9380292317e7a67f9961d2[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 10:06:16 2022 -0300
+
+    create interfaces
+
+[33mcommit f9e7b9fe29392c042a776b7d190b86bfd7da3468[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 09:55:24 2022 -0300
+
+    create folder and feedbacks-repository file
+
+[33mcommit 6a1715b1261f36ff13f99d714f4ba0f9757c9acd[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 09:48:52 2022 -0300
+
+    new feedback sent
+
+[33mcommit 75b4166b3f224e2b7ceff68c6a5093c99ee67fb6[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 09:45:33 2022 -0300
+
+    minor fix
+
+[33mcommit f953ccff86afff5c19a7ac57798d0e5168bb1d61[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 09:44:55 2022 -0300
+
+    move code to another file
+
+[33mcommit 8ddcc575244a43bfbd123b3336d7bcd77e258dfa[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Thu May 26 09:44:44 2022 -0300
+
+    create routes,ts
+
+[33mcommit 3860e4d3949480bcc089bbf6fb8be642a91847c6[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Wed May 25 11:40:30 2022 -0300
+
+    new feedback
+
+[33mcommit 257c6d9bd7c672e17e0a4b9ef04ec8e59e6b40d4[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Wed May 25 11:31:02 2022 -0300
+
+    add nodemailer initial config, use sendMail fnct
+
+[33mcommit 8da0e95e314df5199b730102d1614257b9ddd61c[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Wed May 25 10:42:58 2022 -0300
+
+    add types for nodemailer
+
+[33mcommit 9e9c6d473b64412cad3abb02e485665bcf147466[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Wed May 25 10:40:13 2022 -0300
+
+    add nodemailer
+
+[33mcommit c1f8f2089a441261ecd765ab72ae43c00c86171b[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 10:47:37 2022 -0300
+
+    change return status and change to async func
+
+[33mcommit 979a56218ec94c204fa83a9c997a3ce9db77b487[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 10:36:44 2022 -0300
+
+    create access to database
+
+[33mcommit 0e62f43a324e4f98cea423cc98450c3d0d395e57[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 10:31:34 2022 -0300
+
+    add post and use method
+
+[33mcommit fa3526ef8be85f74ba88b44e4fa5192ba8c80183[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:23:50 2022 -0300
+
+    create table in the dataset
+
+[33mcommit aa83a8551b93d78edd2ea3fba051f876c1fcb6cb[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:20:44 2022 -0300
+
+    add comment
+
+[33mcommit e33a23f5262e85164d7b6faecad2e13ef5951ebb[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:20:21 2022 -0300
+
+    create mode Feedback
+
+[33mcommit 919cf1ca5db25493d4eb06a205ac1ad19ef6dc33[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:04:53 2022 -0300
+
+    change provider to sqlite
+
+[33mcommit 9016c8ec5355f1a2b3fe3ebaf3d5cf6206609d3c[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:03:16 2022 -0300
+
+    add get function
+
+[33mcommit 6e485cb2e603ff4454188fa8a40cd14d1e766f1f[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 09:02:54 2022 -0300
+
+    prisma base code
+
+[33mcommit 476cd27aa1d529f7d4e194a0607afcbd01b23f49[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 08:59:38 2022 -0300
+
+    add prisma/client
+
+[33mcommit 77bbc0d7c5061b8359cef6e612d39c909a6e01cb[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 08:58:10 2022 -0300
+
+    add prisma
+
+[33mcommit 1d2246d341817e21f203fb650b75382ba6ac7fad[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 07:59:02 2022 -0300
+
+    import express
+
+[33mcommit c6f5754f76488ae4b96d978a601937901cbad173[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 07:56:08 2022 -0300
+
+    add types for express
+
+[33mcommit 7c8c363bb0e6da0912628f23611d13a64747d642[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 07:53:03 2022 -0300
+
+    add express and "dev" script
+
+[33mcommit 9c47d37857e3ffff2e07ac32cdfbd82e7824613c[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Tue May 24 07:38:07 2022 -0300
+
+    add rootDir and outDir
+
+[33mcommit 508e3bdcfda0723d8cff662dc851507ff1116868[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Mon May 23 20:15:56 2022 -0300
+
+    change ecmascript version
+
+[33mcommit 4f387892e6ae2d74438a3efdb6b61afcca53b6d3[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Mon May 23 20:10:18 2022 -0300
+
+    add tsconfig
+
+[33mcommit afad2bf73a530acc83b40ac8ec7c05c0e7f56259[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Mon May 23 20:09:22 2022 -0300
+
+    add dependencies
+
+[33mcommit f09ce4644b1304c2cadd30a72d08baf16727c612[m
+Author: alvaro-j <alvarojaime360@gmail.com>
+Date:   Mon May 23 20:06:30 2022 -0300
+
