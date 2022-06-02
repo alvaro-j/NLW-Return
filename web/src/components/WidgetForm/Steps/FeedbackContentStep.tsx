@@ -4,6 +4,7 @@ import { FeedbackType, feedbackTypes } from "..";
 import { api } from "../../../lib/api";
 import CloseButton from "../../CloseButton";
 import ScreenshotButton from "../ScreenshotButton";
+import Loading from "../../Loading";
 
 interface FeedbackContentStepProps {
 	feedbackType: FeedbackType;
@@ -18,16 +19,19 @@ const FeedbackContentStep = ({
 }: FeedbackContentStepProps) => {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
 	const [comment, setComment] = React.useState("");
+	const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
 
 	const handleSubmitFeedback = async (e: FormEvent) => {
 		// FormEvent is the interface from React
 		e.preventDefault();
+		setIsSendingFeedback(true);
 		// console.log({ screenshot, comment });
 		await api.post("/feedbacks", {
 			type: feedbackType,
 			comment,
 			screenshot,
 		});
+		setIsSendingFeedback(false);
 		onFeedbackSent();
 	};
 
@@ -65,7 +69,7 @@ const FeedbackContentStep = ({
 						className="p-2 bg-brand-500 rounded-md border-transparent flex-1 flex justify-center items-center text-sm hover:bg-brand-300 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 disabled:opacity-50 disabled:hover:bg-brand-500"
 						disabled={!comment}
 					>
-						Send feedback
+						{isSendingFeedback ? <Loading /> : "Send feedback"}
 					</button>
 				</footer>
 			</form>
