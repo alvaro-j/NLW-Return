@@ -1,3 +1,5 @@
+import "react-native-gesture-handler";
+
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 import AppLoading from "expo-app-loading"; // prevents the app from loading without the fonts
