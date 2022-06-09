@@ -67,9 +67,9 @@ const WidgetForm = () => {
 				<a
 					className="underline underline-offset-2"
 					target="_blank"
-					href="https://rocketseat.com.br"
+					href="https://github.com/alvaro-j"
 				>
-					Rocketseat
+					Álvaro J.
 				</a>
 			</footer>
 		</div>
