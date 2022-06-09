@@ -1,7 +1,7 @@
 # Feedget
 
 <p align="center">
-  <img width="460" height="300" src="https://user-images.githubusercontent.com/86482525/172863565-338b3c4a-507b-4ff3-87ac-02c873d0c046.png">
+  <img src="https://user-images.githubusercontent.com/86482525/172863565-338b3c4a-507b-4ff3-87ac-02c873d0c046.png">
 </p>
 
 ![image](https://user-images.githubusercontent.com/86482525/172863565-338b3c4a-507b-4ff3-87ac-02c873d0c046.png)
