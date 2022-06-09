@@ -5,4 +5,5 @@ export const styles = StyleSheet.create({
 	header: {},
 	titleContainer: {},
 	titleText: {},
+	image: {},
 });
