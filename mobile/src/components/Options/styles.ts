@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	title: {
-		fontSize: 20,
+		fontSize: 18, // 20 normal size
 		marginBottom: 32,
 		fontFamily: theme.fonts.medium,
 		color: theme.colors.text_primary,
