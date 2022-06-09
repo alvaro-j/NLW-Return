@@ -8,6 +8,9 @@ import { Options } from "../Options";
 
 import { styles } from "./styles";
 import { theme } from "../../theme";
+import { feedbackTypes } from "../../utils/feedbackTypes";
+
+export type FeedbackType = keyof typeof feedbackTypes; // this gets the types of the object
 
 function Widget() {
 	const bottomSheetRef = React.useRef<BottomSheet>(null); // refers to the bottom sheet
