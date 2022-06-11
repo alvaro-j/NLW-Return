@@ -4,7 +4,7 @@ import { theme } from "../../theme";
 export const styles = StyleSheet.create({
 	container: {
 		paddingHorizontal: 24,
-		alignItems: "center",
+		// alignItems: "center",
 	},
 	header: {
 		flexDirection: "row",
@@ -27,4 +27,14 @@ export const styles = StyleSheet.create({
 		height: 24,
 		marginRight: 8,
 	},
+	input: {
+		height: 112,
+		padding: 12,
+		marginBottom: 8,
+		borderRadius: 4,
+		borderWidth: 1,
+		borderColor: theme.colors.stroke,
+		color: theme.colors.text_primary,
+		fontFamily: theme.fonts.regular,
+	}
 });
