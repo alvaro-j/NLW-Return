@@ -7,6 +7,7 @@ import { theme } from "../../theme";
 import { FeedbackType } from "../Widget";
 import { feedbackTypes } from "../../utils/feedbackTypes";
 import { ScreenshotButton } from "../ScreenshotButton";
+import { FormSubmitButton } from "../FormSubmitButton";
 
 interface Props {
 	feedbackType: FeedbackType;
@@ -33,6 +34,7 @@ export function Form({ feedbackType }: Props) {
 			/>
 			<View style={styles.footer}>
 				<ScreenshotButton onTakeShot={() => {}} onRemoveShot={() => {}} screenshot="" />
+				<FormSubmitButton isLoading={false} />
 			</View>
 		</View>
 	);
