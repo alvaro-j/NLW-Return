@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 	},
 	trashCanIcon: {
 		position: "absolute",
-		right: 0,
-		bottom: 0,
+		right: 1,
+		bottom: 1,
 	},
 });
