@@ -22,8 +22,9 @@ export const styles = StyleSheet.create({
 		backgroundColor: theme.colors.surface_secondary,
 		borderRadius: 4,
 		alignItems: "center",
+		justifyContent: "center",
 		paddingHorizontal: 24,
-		marginBottom: 56,
+		marginBottom: 28, // 56 original
 	},
 	buttonTitle: {
 		fontSize: 14,
