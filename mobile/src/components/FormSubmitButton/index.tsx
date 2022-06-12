@@ -12,7 +12,7 @@ export function FormSubmitButton({ isLoading, ...rest }: Props) {
 	return (
 		<TouchableOpacity style={styles.container} {...rest}>
 			{isLoading ? (
-				<ActivityIndicator color={theme.colors.brand} />
+				<ActivityIndicator color={theme.colors.text_on_brand_color} />
 			) : (
 				<Text style={styles.title}>Send feedback</Text>
 			)}
