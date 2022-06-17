@@ -3,7 +3,6 @@ import { View, TextInput, Image, Text, TouchableOpacity } from "react-native";
 import { ArrowLeft } from "phosphor-react-native";
 import { captureScreen } from "react-native-view-shot";
 
-
 import { styles } from "./styles";
 import { theme } from "../../theme";
 import { FeedbackType } from "../Widget";
@@ -16,6 +15,17 @@ interface Props {
 }
 
 export function Form({ feedbackType }: Props) {
+	const [screenshot, setScreenshot] = React.useState<string | null>(null);
+	const handleScreenshot = () => {
+		captureScreen({
+			format: "jpg",
+			quality: 0.8,
+		}).then(
+			(uri) => setScreenshot(uri),
+			(error) => console.error("Oops, snapshot failed", error)
+		);
+	};
+
 	const feedbackTypeInfo = feedbackTypes[feedbackType];
 	return (
 		<View style={styles.container}>
