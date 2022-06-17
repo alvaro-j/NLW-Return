@@ -25,7 +25,9 @@ export function Form({ feedbackType }: Props) {
 			(error) => console.error("Oops, snapshot failed", error)
 		);
 	};
-
+	const handleRemoveScreenshot = () => {
+		setScreenshot(null);
+	};
 	const feedbackTypeInfo = feedbackTypes[feedbackType];
 	return (
 		<View style={styles.container}>
@@ -45,7 +47,11 @@ export function Form({ feedbackType }: Props) {
 				placeholderTextColor={theme.colors.text_secondary}
 			/>
 			<View style={styles.footer}>
-				<ScreenshotButton onTakeShot={handleScreenshot} onRemoveShot={() => {}} screenshot={screenshot} />
+				<ScreenshotButton
+					onTakeShot={handleScreenshot}
+					onRemoveShot={handleRemoveScreenshot}
+					screenshot={screenshot}
+				/>
 				<FormSubmitButton isLoading={false} />
 			</View>
 		</View>
