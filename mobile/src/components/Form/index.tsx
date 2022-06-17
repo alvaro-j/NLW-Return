@@ -1,6 +1,8 @@
 import React from "react";
 import { View, TextInput, Image, Text, TouchableOpacity } from "react-native";
 import { ArrowLeft } from "phosphor-react-native";
+import { captureScreen } from "react-native-view-shot";
+
 
 import { styles } from "./styles";
 import { theme } from "../../theme";
