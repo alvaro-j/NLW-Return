@@ -15,6 +15,9 @@ import { feedbackTypes } from "../../utils/feedbackTypes";
 export type FeedbackType = keyof typeof feedbackTypes; // this gets the types of the object
 
 function Widget() {
+	const [feedbackType, setFeedbackType] = React.useState<FeedbackType | null>(null); // save the what's the feedback type
+	const [feedbackSent, setFeedbackSent] = React.useState(false); // save the what's the feedback type
+
 	const bottomSheetRef = React.useRef<BottomSheet>(null); // refers to the bottom sheet
 	const handleOpenBottomSheet = () => {
 		bottomSheetRef.current?.expand();
@@ -30,9 +33,11 @@ function Widget() {
 				backgroundStyle={styles.modal}
 				handleIndicatorStyle={styles.indicator}
 			>
-				<Options />
-				{/* <Form feedbackType="BUG" /> */}
-				{/* <Success/> */}
+				{feedbackSent ? (
+					<Success />
+				) : (
+					<>{feedbackType ? <Form feedbackType={feedbackType} /> : <Options />}</>
+				)}
 			</BottomSheet>
 		</>
 	);
