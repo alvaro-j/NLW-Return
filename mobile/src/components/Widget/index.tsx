@@ -22,6 +22,11 @@ function Widget() {
 	const handleOpenBottomSheet = () => {
 		bottomSheetRef.current?.expand();
 	};
+
+	const handleRestartFeedback = () => {
+		setFeedbackType(null)
+		setFeedbackSent(false)
+	}
 	return (
 		<>
 			<TouchableOpacity style={styles.button} onPress={handleOpenBottomSheet}>
@@ -38,7 +43,7 @@ function Widget() {
 				) : (
 					<>
 						{feedbackType ? (
-							<Form feedbackType={feedbackType} />
+							<Form feedbackType={feedbackType} onFeedbackCanceled={handleRestartFeedback} onFeedbackSent={() => {}} />
 						) : (
 							<Options onFeedbackTypeChanged={setFeedbackType} />
 						)}
