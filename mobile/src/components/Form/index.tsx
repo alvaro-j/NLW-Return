@@ -42,14 +42,14 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 					<Text style={styles.titleText}>{feedbackTypeInfo.title}</Text>
 				</View>
 			</View>
-			<TextInput
-				multiline
-				style={styles.input}
-				placeholder="Tell us what's happening..."
-				placeholderTextColor={theme.colors.text_secondary}
-				onSubmitEditing={Keyboard.dismiss}
-				spellCheck={false}
-			/>
+				<TextInput
+					multiline
+					style={styles.input}
+					placeholder="Tell us what's happening..."
+					placeholderTextColor={theme.colors.text_secondary}
+					onSubmitEditing={Keyboard.dismiss}
+					spellCheck={false}
+				/>
 			<View style={styles.footer}>
 				<ScreenshotButton
 					onTakeShot={handleScreenshot}
