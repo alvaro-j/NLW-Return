@@ -36,7 +36,13 @@ function Widget() {
 				{feedbackSent ? (
 					<Success />
 				) : (
-					<>{feedbackType ? <Form feedbackType={feedbackType} /> : <Options />}</>
+					<>
+						{feedbackType ? (
+							<Form feedbackType={feedbackType} />
+						) : (
+							<Options onFeedbackTypeChanged={setFeedbackType} />
+						)}
+					</>
 				)}
 			</BottomSheet>
 		</>
