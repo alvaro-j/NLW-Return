@@ -21,7 +21,12 @@ export function Options({ onFeedbackTypeChanged }: Props) {
 					(
 						[key, value] // destructuring the array first
 					) => (
-						<Option key={key} image={value.image} title={value.title} />
+						<Option
+							key={key}
+							image={value.image}
+							title={value.title}
+							onPress={() => onFeedbackTypeChanged(key as FeedbackType)}
+						/>
 					)
 				)}
 			</View>
