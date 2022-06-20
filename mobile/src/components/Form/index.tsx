@@ -1,5 +1,5 @@
 import React from "react";
-import { View, TextInput, Image, Text, TouchableOpacity } from "react-native";
+import { View, TextInput, Image, Text, TouchableOpacity, Keyboard } from "react-native";
 import { ArrowLeft } from "phosphor-react-native";
 import { captureScreen } from "react-native-view-shot";
 
@@ -47,6 +47,8 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 				style={styles.input}
 				placeholder="Tell us what's happening..."
 				placeholderTextColor={theme.colors.text_secondary}
+				onSubmitEditing={Keyboard.dismiss}
+				spellCheck={false}
 			/>
 			<View style={styles.footer}>
 				<ScreenshotButton
