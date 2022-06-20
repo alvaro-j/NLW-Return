@@ -24,9 +24,14 @@ function Widget() {
 	};
 
 	const handleRestartFeedback = () => {
-		setFeedbackType(null)
-		setFeedbackSent(false)
-	}
+		setFeedbackType(null); // resets the feedback type
+		setFeedbackSent(false); // resets the status sent of the feedback
+	};
+
+	const handleFeedbackSent = () => {
+		setFeedbackSent(true);
+	};
+
 	return (
 		<>
 			<TouchableOpacity style={styles.button} onPress={handleOpenBottomSheet}>
@@ -43,7 +48,11 @@ function Widget() {
 				) : (
 					<>
 						{feedbackType ? (
-							<Form feedbackType={feedbackType} onFeedbackCanceled={handleRestartFeedback} onFeedbackSent={() => {}} />
+							<Form
+								feedbackType={feedbackType}
+								onFeedbackCanceled={handleRestartFeedback}
+								onFeedbackSent={() => {}}
+							/>
 						) : (
 							<Options onFeedbackTypeChanged={setFeedbackType} />
 						)}
