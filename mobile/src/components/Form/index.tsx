@@ -12,9 +12,11 @@ import { FormSubmitButton } from "../FormSubmitButton";
 
 interface Props {
 	feedbackType: FeedbackType;
+	onFeedbackCanceled: () => void;
+	onFeedbackSent: () => void;
 }
 
-export function Form({ feedbackType }: Props) {
+export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props) {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
 	const handleScreenshot = () => {
 		captureScreen({
@@ -32,7 +34,7 @@ export function Form({ feedbackType }: Props) {
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={onFeedbackCanceled}>
 					<ArrowLeft size={24} weight="bold" color={theme.colors.text_secondary} />
 				</TouchableOpacity>
 				<View style={styles.titleContainer}>
