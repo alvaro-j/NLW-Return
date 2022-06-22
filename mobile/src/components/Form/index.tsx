@@ -48,7 +48,10 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 			await api.post("/feedbacks", {
 				type: feedbackType,
 				screenshot,
+				comment,
 			});
+			
+			onFeedbackSent();
 		} catch (error) {
 			console.log(error);
 			setIsSendingFeedback(false);
@@ -73,6 +76,7 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 				placeholderTextColor={theme.colors.text_secondary}
 				onSubmitEditing={Keyboard.dismiss}
 				spellCheck={false}
+				onChangeText={setComment}
 			/>
 			<View style={styles.footer}>
 				<ScreenshotButton
