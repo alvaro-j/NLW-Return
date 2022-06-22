@@ -18,6 +18,10 @@ interface Props {
 
 export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props) {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
+	const [isSendingFeedback, setIsSendingFeedback] = React.useState(false)
+
+	const feedbackTypeInfo = feedbackTypes[feedbackType];
+
 	const handleScreenshot = () => {
 		captureScreen({
 			format: "jpg",
@@ -27,10 +31,15 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 			(error) => console.error("Oops, snapshot failed", error)
 		);
 	};
+
 	const handleRemoveScreenshot = () => {
 		setScreenshot(null);
 	};
-	const feedbackTypeInfo = feedbackTypes[feedbackType];
+
+	const handleSubmitFeedback = async () => {
+
+	}
+
 	return (
 		<View style={styles.container}>
 			<View style={styles.header}>
