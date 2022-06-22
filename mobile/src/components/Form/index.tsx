@@ -9,6 +9,7 @@ import { FeedbackType } from "../Widget";
 import { feedbackTypes } from "../../utils/feedbackTypes";
 import { ScreenshotButton } from "../ScreenshotButton";
 import { FormSubmitButton } from "../FormSubmitButton";
+import { api } from "../../libs/api";
 
 interface Props {
 	feedbackType: FeedbackType;
@@ -19,6 +20,7 @@ interface Props {
 export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props) {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
 	const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
+	const [comment, setComment] = React.useState("");
 
 	const feedbackTypeInfo = feedbackTypes[feedbackType];
 
@@ -41,9 +43,12 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 			return;
 		}
 		setIsSendingFeedback(true);
-		
+
 		try {
-			
+			await api.post("/feedbacks", {
+				type: feedbackType,
+				screenshot,
+			});
 		} catch (error) {
 			console.log(error);
 			setIsSendingFeedback(false);
