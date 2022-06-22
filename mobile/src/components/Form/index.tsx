@@ -18,7 +18,7 @@ interface Props {
 
 export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props) {
 	const [screenshot, setScreenshot] = React.useState<string | null>(null);
-	const [isSendingFeedback, setIsSendingFeedback] = React.useState(false)
+	const [isSendingFeedback, setIsSendingFeedback] = React.useState(false);
 
 	const feedbackTypeInfo = feedbackTypes[feedbackType];
 
@@ -37,8 +37,18 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 	};
 
 	const handleSubmitFeedback = async () => {
-
-	}
+		if (isSendingFeedback) {
+			return;
+		}
+		setIsSendingFeedback(true);
+		
+		try {
+			
+		} catch (error) {
+			console.log(error);
+			setIsSendingFeedback(false);
+		}
+	};
 
 	return (
 		<View style={styles.container}>
@@ -51,21 +61,21 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 					<Text style={styles.titleText}>{feedbackTypeInfo.title}</Text>
 				</View>
 			</View>
-				<TextInput
-					multiline
-					style={styles.input}
-					placeholder="Tell us what's happening..."
-					placeholderTextColor={theme.colors.text_secondary}
-					onSubmitEditing={Keyboard.dismiss}
-					spellCheck={false}
-				/>
+			<TextInput
+				multiline
+				style={styles.input}
+				placeholder="Tell us what's happening..."
+				placeholderTextColor={theme.colors.text_secondary}
+				onSubmitEditing={Keyboard.dismiss}
+				spellCheck={false}
+			/>
 			<View style={styles.footer}>
 				<ScreenshotButton
 					onTakeShot={handleScreenshot}
 					onRemoveShot={handleRemoveScreenshot}
 					screenshot={screenshot}
 				/>
-				<FormSubmitButton isLoading={false} />
+				<FormSubmitButton isLoading={isSendingFeedback} />
 			</View>
 		</View>
 	);
