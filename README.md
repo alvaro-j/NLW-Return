@@ -37,7 +37,7 @@ Project built during the NLW Return using React.js, Node.js and React Native.
 - Use <strong>Tailwind classes</strong>:
 ```tsx
 <Popover.Button className="top-5 right-5 absolute text-zinc-400 hover:text-zinc-100 transition-all" title="Close feedback form">
-	<X weight="bold" className="w-4 h-4"/>
+  <X weight="bold" className="w-4 h-4"/>
 </Popover.Button>
 ```
 - Use Typescript <strong>interfaces</strong> to use props:
