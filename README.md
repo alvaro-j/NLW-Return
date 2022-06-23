@@ -40,7 +40,7 @@ Project built during the NLW Return using React.js, Node.js and React Native.
 	<X weight="bold" className="w-4 h-4"/>
 </Popover.Button>
 ```
-- Use Typescript<strong>interfaces</strong> to use props:
+- Use Typescript <strong>interfaces</strong> to use props:
 ```tsx
 interface ScreenshotButtonProps {
   onScreenshotTook: (screenshot: string | null) => void;
