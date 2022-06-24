@@ -7,4 +7,8 @@ export const styles = StyleSheet.create({
 		fontSize: 12,
 		fontFamily: theme.fonts.medium,
 	},
+	link: {
+		color: theme.colors.brand,
+		textDecorationLine: "underline",
+	},
 });
