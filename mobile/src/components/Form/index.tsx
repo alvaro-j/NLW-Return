@@ -51,7 +51,7 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 		try {
 			await api.post("/feedbacks", {
 				type: feedbackType,
-				screenshot,
+				screenshot: `data:image/png;base64, ${base64Screenshot}`,
 				comment,
 			});
 
@@ -88,7 +88,7 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 					onRemoveShot={handleRemoveScreenshot}
 					screenshot={screenshot}
 				/>
-				<FormSubmitButton isLoading={isSendingFeedback} />
+				<FormSubmitButton onPress={handleSubmitFeedback} isLoading={isSendingFeedback} />
 			</View>
 		</View>
 	);
