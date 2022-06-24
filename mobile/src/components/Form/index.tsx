@@ -10,7 +10,7 @@ import { feedbackTypes } from "../../utils/feedbackTypes";
 import { ScreenshotButton } from "../ScreenshotButton";
 import { FormSubmitButton } from "../FormSubmitButton";
 import { api } from "../../libs/api";
-import FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system";
 
 interface Props {
 	feedbackType: FeedbackType;
