@@ -10,6 +10,7 @@ import { feedbackTypes } from "../../utils/feedbackTypes";
 import { ScreenshotButton } from "../ScreenshotButton";
 import { FormSubmitButton } from "../FormSubmitButton";
 import { api } from "../../libs/api";
+import FileSystem from "expo-file-system";
 
 interface Props {
 	feedbackType: FeedbackType;
@@ -44,13 +45,16 @@ export function Form({ feedbackType, onFeedbackCanceled, onFeedbackSent }: Props
 		}
 		setIsSendingFeedback(true);
 
+		const base64Screenshot =
+			screenshot && FileSystem.readAsStringAsync(screenshot, { encoding: "base64" });
+
 		try {
 			await api.post("/feedbacks", {
 				type: feedbackType,
 				screenshot,
 				comment,
 			});
-			
+
 			onFeedbackSent();
 		} catch (error) {
 			console.log(error);
