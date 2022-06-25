@@ -31,6 +31,7 @@ Project built during the NLW Return using React.js, Node.js and React Native.
 - Node.js
 - Prisma
 - React Native
+- Expo
 
 ### What I learned📝
 
