@@ -48,6 +48,10 @@ interface ScreenshotButtonProps {
   screenshot: string | null;
 }
 ```
+- Setup a React Native project with <strong>expo</strong>:
+```zsh
+expo init
+```
 ## Author🙋🏻
 
 - Website - [Álvaro J.](https://www.github.com/alvaro-j/)
